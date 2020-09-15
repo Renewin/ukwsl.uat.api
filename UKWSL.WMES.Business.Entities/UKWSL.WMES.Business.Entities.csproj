@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6215976C-B164-4382-927D-C3A1EEBF9BEA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UKWSL.WMES.Business.Entities</RootNamespace>
+    <AssemblyName>UKWSL.WMES.Business.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountInfo.cs" />
+    <Compile Include="ContractorCRFArchive.cs" />
+    <Compile Include="ContractorWeightInfo.cs" />
+    <Compile Include="Contractor_Config_AreaofCoverage.cs" />
+    <Compile Include="Contractor_Config_PotentialService.cs" />
+    <Compile Include="Contractor_CRFContacts.cs" />
+    <Compile Include="Contractor_CustomerRequirementForm.cs" />
+    <Compile Include="ContractorCRFDetails.cs" />
+    <Compile Include="ContractorSHEQArchiveDetails.cs" />
+    <Compile Include="ContractorSHEQDetails.cs" />
+    <Compile Include="Contractor_ExternalLinks.cs" />
+    <Compile Include="CountyInfo.cs" />
+    <Compile Include="DoC\DOCPageResponse.cs" />
+    <Compile Include="DoC\DOCViewModel.cs" />
+    <Compile Include="DoC\DOC_BackingData.cs" />
+    <Compile Include="DoC\DoC_DocumentTracker.cs" />
+    <Compile Include="DoC\DOC_HeaderDetails.cs" />
+    <Compile Include="DoC\DOC_OfflineUpload.cs" />
+    <Compile Include="DoC\DOC_PageDetails.cs" />
+    <Compile Include="DoC\EmailTemplatesMaster.cs" />
+    <Compile Include="DoC\FinancialYearMaster.cs" />
+    <Compile Include="DoC\LetterTracker.cs" />
+    <Compile Include="DoC\Master_SOS_WasteType.cs" />
+    <Compile Include="CustomerPriceUpdateRestrictionHistory.cs" />
+    <Compile Include="CustomerPriceUpdateRestriction.cs" />
+    <Compile Include="FacilityAllocatedContractors.cs" />
+    <Compile Include="APIConfigFunctions.cs" />
+    <Compile Include="APIConfiguration.cs" />
+    <Compile Include="ApprovedPricingSolution.cs" />
+    <Compile Include="ApprovedPricingSolutionUDT.cs" />
+    <Compile Include="ContractorAdminSetting.cs" />
+    <Compile Include="ContractorAnnualTurnOver.cs" />
+    <Compile Include="ContractorApprovalStatus.cs" />
+    <Compile Include="ContractorBasicInfo.cs" />
+    <Compile Include="ContractorComments.cs" />
+    <Compile Include="ContractorCompanyType.cs" />
+    <Compile Include="ContractorContact.cs" />
+    <Compile Include="ContractorContactType.cs" />
+    <Compile Include="ContractorDepots.cs" />
+    <Compile Include="ContractorInfo.cs" />
+    <Compile Include="ContractorLegalBasisData.cs" />
+    <Compile Include="ContractorRegionDetails.cs" />
+    <Compile Include="ContractorStatus.cs" />
+    <Compile Include="ContractorType.cs" />
+    <Compile Include="ContractorWeightsResponsibility.cs" />
+    <Compile Include="FacilityInfo.cs" />
+    <Compile Include="FacilityMaterialTypePercentageUDT.cs" />
+    <Compile Include="FacilityMaterialTypePercentage.cs" />
+    <Compile Include="FacilityPercentage.cs" />
+    <Compile Include="FacilityMaterialTypeHistory.cs" />
+    <Compile Include="FacilityWasteTypePercentageUDT.cs" />
+    <Compile Include="FacilityWasteTypePercentage.cs" />
+    <Compile Include="ImportActualWeight.cs" />
+    <Compile Include="ImportActualWeightUDT.cs" />
+    <Compile Include="JobType.cs" />
+    <Compile Include="BagType.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="CompanyDealUDT.cs" />
+    <Compile Include="CompanyInfo.cs" />
+    <Compile Include="ContactsAdditionMapping.cs" />
+    <Compile Include="ContactsAdditionMappingUDT.cs" />
+    <Compile Include="Container.cs" />
+    <Compile Include="ContainerConfigurations.cs" />
+    <Compile Include="ContainerSize.cs" />
+    <Compile Include="ContainerType.cs" />
+    <Compile Include="Contractor.cs" />
+    <Compile Include="ContractorPrice.cs" />
+    <Compile Include="CustomerAdminSettings.cs" />
+    <Compile Include="CustomerBasicInfo.cs" />
+    <Compile Include="CustomerComments.cs" />
+    <Compile Include="CustomerContactType.cs" />
+    <Compile Include="CustomerContactUDT.cs" />
+    <Compile Include="CustomerContact.cs" />
+    <Compile Include="CustomerGroupInfo.cs" />
+    <Compile Include="CustomerInfo.cs" />
+    <Compile Include="CustomerQuantityType.cs" />
+    <Compile Include="CustomerSite.cs" />
+    <Compile Include="CustomerStatusType.cs" />
+    <Compile Include="DocumentInfo.cs" />
+    <Compile Include="DocumentType.cs" />
+    <Compile Include="FacilityBasicInfo.cs" />
+    <Compile Include="FacilityType.cs" />
+    <Compile Include="GroupType.cs" />
+    <Compile Include="LegalBasis.cs" />
+    <Compile Include="MonthlyPaymentType.cs" />
+    <Compile Include="CustomerPriceUpdateRestrictionInfo.cs" />
+    <Compile Include="PriceUpdate_ActionHeader.cs" />
+    <Compile Include="PriceUpdate_ExceptionReport.cs" />
+    <Compile Include="PriceUpdate_UpdateReport.cs" />
+    <Compile Include="PricingMatrixDetail.cs" />
+    <Compile Include="PricingMatrixInfo.cs" />
+    <Compile Include="PricingMatrixSetup.cs" />
+    <Compile Include="PricingMatrixType.cs" />
+    <Compile Include="PricingMatrixUploadInfo.cs" />
+    <Compile Include="PricingMatrix_MatrixDetails.cs" />
+    <Compile Include="PricingMatrix_MatrixDetailsUDT.cs" />
+    <Compile Include="PriceUpdateUploadDetails.cs" />
+    <Compile Include="PriceUpdateUploadDetailsUDT.cs" />
+    <Compile Include="PriceUpdateUploadInfo.cs" />
+    <Compile Include="PricingUpdateStatus.cs" />
+    <Compile Include="Review_ContractorContacts.cs" />
+    <Compile Include="Review_ContractorSHEQ.cs" />
+    <Compile Include="Review_CustomerRequirementForm.cs" />
+    <Compile Include="OrderEmailTemplate.cs" />
+    <Compile Include="SectorType.cs" />
+    <Compile Include="CustomerType.cs" />
+    <Compile Include="Deal.cs" />
+    <Compile Include="DealHistory.cs" />
+    <Compile Include="DealInfo.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="EndDestinationType.cs" />
+    <Compile Include="ExportInfo.cs" />
+    <Compile Include="Filedetails.cs" />
+    <Compile Include="FrequencySize.cs" />
+    <Compile Include="FrequencyType.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="MasterInfo.cs" />
+    <Compile Include="MaterialType.cs" />
+    <Compile Include="Notifications.cs" />
+    <Compile Include="NotificationInfo.cs" />
+    <Compile Include="RoleFunctionPermission.cs" />
+    <Compile Include="Modules.cs" />
+    <Compile Include="PreferredContractorPrice.cs" />
+    <Compile Include="PriceInflation.cs" />
+    <Compile Include="PricingInfo.cs" />
+    <Compile Include="PricingMethod.cs" />
+    <Compile Include="PricingToolUDTFileData.cs" />
+    <Compile Include="Result.cs" />
+    <Compile Include="Roles.cs" />
+    <Compile Include="ScheduleofService.cs" />
+    <Compile Include="ScheduleService.cs" />
+    <Compile Include="ServiceBasicInfo.cs" />
+    <Compile Include="ServiceDeliveryFailureType.cs" />
+    <Compile Include="ServiceJobDetails.cs" />
+    <Compile Include="ServiceInfo.cs" />
+    <Compile Include="ServiceOrderDetails.cs" />
+    <Compile Include="ServiceOrderEmailDetails.cs" />
+    <Compile Include="SettingUp.cs" />
+    <Compile Include="SettingUpViewModel.cs" />
+    <Compile Include="SHEQDocumentTypes.cs" />
+    <Compile Include="Sites.cs" />
+    <Compile Include="SOSExports.cs" />
+    <Compile Include="SOSFileDetails.cs" />
+    <Compile Include="SOSHeader.cs" />
+    <Compile Include="SOSInfo.cs" />
+    <Compile Include="SOSUDTFileData.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserFunction.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="WasteType.cs" />
+    <Compile Include="FacilityWasteTypeHistory.cs" />
+    <Compile Include="WorkflowHeader.cs" />
+    <Compile Include="WorkflowInstance.cs" />
+    <Compile Include="WorkflowStatus.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

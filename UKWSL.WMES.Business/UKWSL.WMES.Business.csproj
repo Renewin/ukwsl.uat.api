@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C7646EC-5239-47A5-8AE4-B8CCEC6FA11F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UKWSL.WMES.Business</RootNamespace>
+    <AssemblyName>UKWSL.WMES.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApprovedPricing\IApprovedPricingManager.cs" />
+    <Compile Include="ApprovedPricing\ApprovedPricingManager.cs" />
+    <Compile Include="Authentication\AuthenticationManager.cs" />
+    <Compile Include="Authentication\IAuthenticationManager.cs" />
+    <Compile Include="ContractorRegister\ContractorRegisterManager.cs" />
+    <Compile Include="ContractorRegister\IContractorRegisterManager.cs" />
+    <Compile Include="Contractors\ContractorManager.cs" />
+    <Compile Include="Contractors\IContractorManager.cs" />
+    <Compile Include="ContractorWeight\ContractorWeightManager.cs" />
+    <Compile Include="ContractorWeight\IContractorWeightManager.cs" />
+    <Compile Include="Customer\CustomerManager.cs" />
+    <Compile Include="Customer\DealManager.cs" />
+    <Compile Include="Customer\ICustomerManager.cs" />
+    <Compile Include="Customer\IDealManager.cs" />
+    <Compile Include="Customer\ISiteManager.cs" />
+    <Compile Include="Customer\SiteManager.cs" />
+    <Compile Include="DutyOfCare\DutyOfCareManager.cs" />
+    <Compile Include="DutyOfCare\IDutyOfCareManager.cs" />
+    <Compile Include="Exports\ExportManager.cs" />
+    <Compile Include="Exports\IExportManager.cs" />
+    <Compile Include="Facility\FacilityManager.cs" />
+    <Compile Include="Facility\IFacilityManager.cs" />
+    <Compile Include="Integration\IIntegrationManager.cs" />
+    <Compile Include="Integration\IntegrationManager.cs" />
+    <Compile Include="Master\IMasterManager.cs" />
+    <Compile Include="Master\MasterManager.cs" />
+    <Compile Include="Notification\INotificationManager.cs" />
+    <Compile Include="Notification\NotificationManager.cs" />
+    <Compile Include="PricingMatrix\IPricingMatrixManager.cs" />
+    <Compile Include="PricingMatrix\PricingMatrixManager.cs" />
+    <Compile Include="Pricing\IPricingOptimizationManager.cs" />
+    <Compile Include="Pricing\PricingOptimizationManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScheduleOfService\IScheduleOfServiceManager.cs" />
+    <Compile Include="ScheduleOfService\ScheduleOfServiceManager.cs" />
+    <Compile Include="Service\IServiceManager.cs" />
+    <Compile Include="Service\ServiceManager.cs" />
+    <Compile Include="UserRoleMangement\IUserRoleManagementManager.cs" />
+    <Compile Include="UserRoleMangement\UserRoleManagementManager.cs" />
+    <Compile Include="Workflow\IWorkflowManager.cs" />
+    <Compile Include="Workflow\WorkflowManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UKWSL.WMES.Business.Entities\UKWSL.WMES.Business.Entities.csproj">
+      <Project>{6215976c-b164-4382-927d-c3a1eebf9bea}</Project>
+      <Name>UKWSL.WMES.Business.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UKWSL.WMES.Repositories\UKWSL.WMES.Repositories.csproj">
+      <Project>{a48dadbd-a95a-4b6a-bb5b-0e1832e9d752}</Project>
+      <Name>UKWSL.WMES.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UKWSL.WMES.Utility\UKWSL.WMES.Utility.csproj">
+      <Project>{a58d1d28-11ae-41c6-a6f5-1b80ff48525a}</Project>
+      <Name>UKWSL.WMES.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A48DADBD-A95A-4B6A-BB5B-0E1832E9D752}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UKWSL.WMES.Repositories</RootNamespace>
+    <AssemblyName>UKWSL.WMES.Repositories</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApprovedPricing\IApprovedPricingRepository.cs" />
+    <Compile Include="ApprovedPricing\ApprovedPricingRepository.cs" />
+    <Compile Include="Authentication\AuthenticationRepository.cs" />
+    <Compile Include="Authentication\IAuthenticationRepository.cs" />
+    <Compile Include="ContractorRegister\ContractorRegisterRepository.cs" />
+    <Compile Include="ContractorRegister\IContractorRegisterRepository.cs" />
+    <Compile Include="Contractors\ContractorRepository.cs" />
+    <Compile Include="Contractors\IContractorRepository.cs" />
+    <Compile Include="ContractorWeight\ContractorWeightRepository.cs" />
+    <Compile Include="ContractorWeight\IContractorWeightRepository.cs" />
+    <Compile Include="Customer\CustomerRepository.cs" />
+    <Compile Include="Customer\DealRepository.cs" />
+    <Compile Include="Customer\ICustomerRepository.cs" />
+    <Compile Include="Customer\IDealRepository.cs" />
+    <Compile Include="Customer\ISiteRepository.cs" />
+    <Compile Include="Customer\SiteRepository.cs" />
+    <Compile Include="DbContext\ContexDetails.cs" />
+    <Compile Include="DutyofCare\DutyofCareRepository.cs" />
+    <Compile Include="DutyofCare\IDutyofCareRepository.cs" />
+    <Compile Include="Exports\ExportRepository.cs" />
+    <Compile Include="Exports\IExportRepository.cs" />
+    <Compile Include="Facility\FacilityRepository.cs" />
+    <Compile Include="Facility\IFacilityRepository.cs" />
+    <Compile Include="Integration\IIntegrationRepository.cs" />
+    <Compile Include="Integration\IntegrationRepository.cs" />
+    <Compile Include="Master\IMasterRepository.cs" />
+    <Compile Include="Master\MasterRepository.cs" />
+    <Compile Include="Notification\INotificationRepository.cs" />
+    <Compile Include="Notification\NotificationRepository.cs" />
+    <Compile Include="PricingMatrix\IPricingMatrixRepository.cs" />
+    <Compile Include="PricingMatrix\PricingMatrixRepository.cs" />
+    <Compile Include="Pricing\IPricingOptimizationRepository.cs" />
+    <Compile Include="Pricing\PricingOptimizationRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScheduleofServices\IScheduleOfServiceRepository.cs" />
+    <Compile Include="ScheduleofServices\ScheduleOfServiceRepository.cs" />
+    <Compile Include="Service\IServiceRepository.cs" />
+    <Compile Include="Service\ServiceRepository.cs" />
+    <Compile Include="UserRoleMangement\IUserRoleManagementRepository.cs" />
+    <Compile Include="UserRoleMangement\UserRoleManagementRepository.cs" />
+    <Compile Include="Workflow\IWorkflowRepository.cs" />
+    <Compile Include="Workflow\WorkflowRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UKWSL.WMES.Business.Entities\UKWSL.WMES.Business.Entities.csproj">
+      <Project>{6215976c-b164-4382-927d-c3a1eebf9bea}</Project>
+      <Name>UKWSL.WMES.Business.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UKWSL.WMES.Resources\UKWSL.WMES.Resources.csproj">
+      <Project>{7efbfeb4-a461-44a0-acab-1fc4f54e5d78}</Project>
+      <Name>UKWSL.WMES.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UKWSL.WMES.Utility\UKWSL.WMES.Utility.csproj">
+      <Project>{a58d1d28-11ae-41c6-a6f5-1b80ff48525a}</Project>
+      <Name>UKWSL.WMES.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
